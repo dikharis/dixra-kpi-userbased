@@ -1,0 +1,7 @@
+{
+  "name": "SiPro - Sistem Laporan Proyek",
+  "description": "Aplikasi manajemen laporan harian proyek konstruksi yang responsif dan mudah digunakan untuk kontraktor, mandor, dan owner.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

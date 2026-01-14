@@ -1,11 +1,30 @@
-<div align="center">
+# Sistem Laporan Pekerjaan Kontraktor (SiPro)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+## 1. Gambaran Arsitektur Sistem
+Sistem ini dibangun sebagai Single Page Application (SPA) menggunakan React.
+- **Frontend**: React + TypeScript + Tailwind CSS.
+- **State Management**: React Context / Hooks (Simulasi data lokal untuk demo).
+- **Architecture Pattern**: Component-based architecture dengan pemisahan antara UI (Components) dan Data Logic (Services/Hooks).
 
-  <h1>Built with AI Studio</h2>
+## 2. Struktur Database (Simulasi)
+Berikut adalah desain skema database (Relational) yang direpresentasikan dalam TypeScript interfaces:
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- **Users**: `id, name, role (WORKER, SUPERVISOR, OWNER), avatar`
+- **Projects**: `id, name, location, startDate, endDate, status, progress`
+- **Reports**: `id, projectId, userId, date, jobDesk, description, progressUpdate, status (PENDING, APPROVED), issues`
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 3. User Flow
+1. **Worker**: Login -> Pilih Proyek -> Isi Form Harian (Foto, Deskripsi, Progres) -> Submit.
+2. **Supervisor**: Login -> Dashboard Validasi -> Review Laporan -> Approve/Reject.
+3. **Owner**: Login -> Main Dashboard -> Melihat Grafik Progres & Isu -> Download Excel.
 
-</div>
+## 4. Tech Stack Rekomendasi
+- **Frontend**: React, Tailwind, Recharts (Visualisasi), Lucide (Icons).
+- **Backend (Real World)**: Node.js/GoLang, PostgreSQL (Data Relasional), S3 (Penyimpanan Foto).
+- **Infra**: Docker, Nginx.
+
+## 5. Ruang Lingkup MVP
+- Input Laporan Harian (CRUD).
+- Validasi Mandor.
+- Dashboard Visual Statistik.
+- Manajemen Data Proyek Sederhana.
