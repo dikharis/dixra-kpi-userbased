@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Project, User, DailyReport, ReportStatus } from '../types';
-import { Camera, Calendar, Clock, MapPin, AlertTriangle, CheckCircle, Save } from 'lucide-react';
+import { Camera, MapPin, AlertTriangle, CheckCircle, Save } from 'lucide-react';
 
 interface DailyReportFormProps {
   currentUser: User;

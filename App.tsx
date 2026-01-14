@@ -5,7 +5,7 @@ import { DailyReportForm } from './components/DailyReportForm';
 import { SupervisorView } from './components/SupervisorView';
 import { OwnerDashboard } from './components/OwnerDashboard';
 import { ProjectTimeline } from './components/ProjectTimeline';
-import { HardHat, Users, LayoutDashboard, LogOut } from 'lucide-react';
+import { HardHat } from 'lucide-react';
 
 const App: React.FC = () => {
   // State Simulation for Database

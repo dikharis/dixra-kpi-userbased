@@ -1,6 +1,6 @@
 import React from 'react';
 import { Project, DailyReport, ReportStatus } from '../types';
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, LineChart, Line } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import { TrendingUp, AlertOctagon, Briefcase, FileText, Download } from 'lucide-react';
 
 interface OwnerDashboardProps {
@@ -128,7 +128,7 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({ projects, report
                   dataKey="value"
                 >
                   {reportsByStatus.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    <Cell key={`cell-${entry.name}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
                 <Tooltip />
